@@ -1,1 +1,1 @@
-docker build -t rawmind/kube-tools:$(cat version) .
+docker build -t rawmind/k8s-tools:$(cat version) .
