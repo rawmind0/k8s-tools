@@ -1,4 +1,4 @@
-kube-tools
+k8s-tools
 =============
 
 A base image to expose tools to services. It's based in [rawmind/alpine-tools][alpine-tools], adding confd and monit scripts to the image.
@@ -6,7 +6,7 @@ A base image to expose tools to services. It's based in [rawmind/alpine-tools][a
 ##Build
 
 ```
-docker build -t rawmind/kube-tools:<version> .
+docker build -t rawmind/k8s-tools:<version> .
 ```
 
 ## Tools volume
@@ -28,7 +28,7 @@ That volume has the following structure:
 
 ## Versions
 
-- `0.3.4` [(Dockerfile)](https://github.com/rawmind0/kube-tools/blob/0.3.4/Dockerfile)
+- `0.3.4` [(Dockerfile)](https://github.com/rawmind0/k8s-tools/blob/0.3.4/Dockerfile)
 
 ## Usage
 
@@ -58,6 +58,6 @@ These are the default parameters to run confd. You could overwrite these values,
 
 An example of using this image can be found in the [rawmind/kube-traefik][kube-traefik].
 
-[kube-traefik]: https://github.com/rawmind0/kube-traefik
+[k8s-zk]: https://github.com/rawmind0/k8s-zk
 [alpine-tools]: https://github.com/rawmind0/alpine-tools
 
