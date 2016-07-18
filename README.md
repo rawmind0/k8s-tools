@@ -52,6 +52,7 @@ These are the default parameters to run confd. You could overwrite these values,
 - CONF_INTERVAL=${CONF_INTERVAL:-"watch"}
 - CONF_PARAMS=${CONF_PARAMS:-"-confdir /opt/tools/confd/etc -backend ${CONF_BACKEND} -prefix ${CONF_PREFIX} -node ${CONF_NODE}"}
 - CONF_INTERVAL="${CONF_BIN} ${CONF_INTERVAL} ${CONF_PARAMS}"
+- KEEP_ALIVE=${KEEP_ALIVE:-"1"}
 
 
 ## Examples
