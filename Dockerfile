@@ -3,8 +3,8 @@ MAINTAINER Raul Sanchez <rawmind@gmail.com>
 
 ENV KEEP_ALIVE=1 
 
-# Add start script
-ADD root /
-RUN tar xzvf ${SERVICE_ARCHIVE} -C ${SERVICE_VOLUME} ; rm ${SERVICE_ARCHIVE} \
-  && cd ${SERVICE_VOLUME} \
-  && tar czvf ${SERVICE_ARCHIVE} * ; rm -rf ${SERVICE_VOLUME}/*
+# Add files
+ADD root /tmp
+RUN tar xzvf ${SERVICE_ARCHIVE} -C ${SERVICE_VOLUME} 
+  && cd ${SERVICE_VOLUME} ; cp -rp /tmp${SERVICE_VOLUME}/* . \
+  && tar czvf ${SERVICE_ARCHIVE} * ; rm -rf ${SERVICE_VOLUME}/* /tmp/*
