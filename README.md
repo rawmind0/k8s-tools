@@ -28,7 +28,7 @@ That volume has the following structure:
 
 ## Versions
 
-- `0.3.4-2` [(Dockerfile)](https://github.com/rawmind0/k8s-tools/blob/0.3.4-2/Dockerfile)
+- `0.3.4-3` [(Dockerfile)](https://github.com/rawmind0/k8s-tools/blob/0.3.4-3/Dockerfile)
 
 ## Usage
 
@@ -48,8 +48,9 @@ These are the default parameters to run confd. You could overwrite these values,
 - CONF_BIN=${CONF_BIN:-"${CONF_HOME}/bin/confd"}
 - CONF_BACKEND=${CONF_BACKEND:-"etcd"}
 - CONF_PREFIX=${CONF_PREFIX:-"/registry"}
-- CONF_NODE=${CONF_NODE:-"etcd.kubernetes.rancher.internal:2379"}
-- CONF_INTERVAL=${CONF_INTERVAL:-"watch"}
+- CONF_NODE_NAME=${CONF_NODE_NAME:-"etcd.kubernetes."}
+- CONF_NODE=${CONF_NODE:-"${CONF_NODE_IP}:2379"}
+- CONF_INTERVAL=${CONF_INTERVAL:-"-watch"}
 - CONF_PARAMS=${CONF_PARAMS:-"-confdir /opt/tools/confd/etc -backend ${CONF_BACKEND} -prefix ${CONF_PREFIX} -node ${CONF_NODE}"}
 - CONF_INTERVAL="${CONF_BIN} ${CONF_INTERVAL} ${CONF_PARAMS}"
 - KEEP_ALIVE=${KEEP_ALIVE:-"1"}
@@ -57,7 +58,7 @@ These are the default parameters to run confd. You could overwrite these values,
 
 ## Examples
 
-An example of using this image can be found in the [rawmind/kube-traefik][kube-traefik].
+An example of using this image can be found in the [rawmind/k8s-zk][k8s-zk].
 
 [k8s-zk]: https://github.com/rawmind0/k8s-zk
 [alpine-tools]: https://github.com/rawmind0/alpine-tools
