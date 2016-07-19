@@ -28,6 +28,7 @@ That volume has the following structure:
 
 ## Versions
 
+- `0.3.4-4` [(Dockerfile)](https://github.com/rawmind0/k8s-tools/blob/0.3.4-4/Dockerfile)
 - `0.3.4-3` [(Dockerfile)](https://github.com/rawmind0/k8s-tools/blob/0.3.4-3/Dockerfile)
 
 ## Usage
