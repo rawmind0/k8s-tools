@@ -1,4 +1,4 @@
-FROM rawmind/alpine-tools:0.3.4-5
+FROM rawmind/alpine-tools:0.3.4-6
 MAINTAINER Raul Sanchez <rawmind@gmail.com>
 
 ENV SERVICE_ARCHIVE=/opt/k8s-tools.tgz \
@@ -6,5 +6,5 @@ ENV SERVICE_ARCHIVE=/opt/k8s-tools.tgz \
 
 # Add files
 ADD root /
-RUN cd ${SERVICE_VOLUME} \
-  && tar czvf ${SERVICE_ARCHIVE} * ; rm -rf ${SERVICE_VOLUME}/* 
+RUN cd ${SERVICE_VOLUME} && \
+    tar czvf ${SERVICE_ARCHIVE} * ; rm -rf ${SERVICE_VOLUME}/* 
