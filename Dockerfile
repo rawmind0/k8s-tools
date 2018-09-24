@@ -1,4 +1,4 @@
-FROM rawmind/alpine-tools:3.5-1
+FROM rawmind/alpine-tools:3.7-0
 MAINTAINER Raul Sanchez <rawmind@gmail.com>
 
 ENV SERVICE_ARCHIVE=/opt/k8s-tools.tgz \
